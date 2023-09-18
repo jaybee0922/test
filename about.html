@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--------footer starts here------------->
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./footer/css/ionicons.min.css" />
+    <link rel="stylesheet" href="./footer/css/style.css" />
+
+    <!--------footer ends here------------->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <title>miniProject 1</title>
+    <link
+      rel="shortcut icon"
+      href="./pngtree-summer-beach-logo-image_389419.ico"
+      type="image/x-icon"
+    />
+    <style>
+      :root {
+        /*-----primary colors------*/
+        --skyblue-color: #4cc9f0;
+        --green-color: #00e235;
+        --red-color: #d90429;
+        /*-----other colors---------*/
+        --white-color: #fff;
+        --black-color: #000000;
+        /*--------max width----------*/
+        --max-width: 1100px;
+      }
+
+      /*--------------utilities------------*/
+      .container {
+        max-width: var(--max-width);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: var(--white-color);
+      }
+      #navbar {
+        background: var(--white-color);
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        font-family: "Poppins", sans-serif;
+        padding: 10px;
+      }
+
+      #navbar .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      #navbar .logo {
+        width: 200px;
+        height: 70px;
+        justify-self: flex-start;
+        padding: 10px;
+      }
+
+      #navbar .navbar-menu {
+        display: flex;
+        list-style: none;
+        text-align: right;
+      }
+
+      #navbar .navbar-menu li a {
+        margin: 10px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #000000;
+        padding: 10px;
+      }
+      /*--------current color----------*/
+      #navbar .navbar-menu li a.current {
+        background: var(--green-color);
+        color: var(--white-color);
+        border-radius: 5px;
+        padding: 15px;
+      }
+
+      #navbar .navbar-menu li a:hover {
+        color: var(--black-color);
+        font-weight: 900;
+      }
+
+      /*----------------------timeLine / history (about page) --------------*/
+
+      #section-history {
+        margin-top: 8rem;
+        width: 100%;
+      }
+
+      .section-about-main-history .container {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        flex-direction: row;
+        gap: 1rem;
+      }
+      .left-image-about img {
+        width: 500px;
+        object-fit: cover;
+      }
+      .right-text-about p {
+        text-align: justify;
+        font-style: italic;
+        font-weight: 480;
+        /* height: 390px; */
+      }
+
+      .right-text-about span {
+        font-weight: 800;
+        text-decoration: underline;
+      }
+
+      /*------------- timeLine / owner (about page) boy -----------------*/
+
+      #section-owner-boy {
+        margin-top: 5rem;
+      }
+
+      .section-about-owner-boy {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        flex-direction: row;
+      }
+
+      .section-about-owner-boy .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+      }
+
+      .left-image-owner-boy img {
+        width: 200px;
+        border-radius: 50%;
+      }
+
+      .right-text-owner-boy p {
+        font-style: italic;
+        font-weight: 480;
+      }
+
+      /*------------- timeLine / owner (about page) girl -----------------*/
+
+      #section-about-girl {
+        margin-top: 5rem;
+      }
+
+      .section-about-owner-girl {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        flex-direction: row;
+      }
+
+      .section-about-owner-girl .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+      }
+
+      .right-image-owner-girl img {
+        width: 200px;
+        border-radius: 50%;
+      }
+
+      .left-text-owner-girl p {
+        font-style: italic;
+        font-weight: 480;
+      }
+
+      /*--------------- timeLine (about page) rewards / trophy------------*/
+
+      #awards {
+        margin-top: 5rem;
+      }
+
+      .section-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .section-header h2 {
+        font-size: 40px;
+        margin: 20px;
+      }
+
+      .flex-items {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        height: 100%;
+      }
+
+      .flex-items .first-award img,
+      .flex-items .second-award img,
+      .flex-items .third-award img {
+        width: 350px;
+        height: 250px;
+        border-radius: 5px;
+      }
+
+      .flex-items > div {
+        padding: 20px;
+      }
+
+      .first-award i,
+      .second-award i,
+      .third-award i {
+        color: var(--white-color);
+        font-size: 40px;
+      }
+
+      .first-award p,
+      .second-award p,
+      .third-award p {
+        background: var(--green-color);
+        padding: 5px;
+        font-weight: 500;
+        border-radius: 5px;
+        margin-top: 10px;
+      }
+
+      .first-award span,
+      .second-award span,
+      .third-award span {
+        font-weight: 800;
+      }
+
+      /*-------------------staff------------------*/
+
+      #section-staff {
+        margin-top: 5rem;
+      }
+
+      .section-header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .section-main-staff {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        gap: 1rem;
+      }
+
+      .section-main-staff img {
+        width: 200px;
+      }
+
+      .section-main-staff h3 {
+        font-size: 15px;
+        text-align: center;
+        padding: 5px 15px;
+      }
+
+      .first-image-staff > p,
+      .second-image-staff > p,
+      .third-image-staff > p,
+      .fourth-image-staff > p {
+        text-align: center;
+        font-weight: 700;
+        font-family: "Raleway", sans-serif;
+      }
+
+      /* <section id="section-staff">
+      <div class="container">
+        <hr />
+        <header class="section-header">
+          <h2>Staff members</h2>
+        </header>
+        <div class="section-main-staff">
+          <div class="first-image-staff">
+            <img
+              src="./images/about-images-staff/person-1.jpg"
+              alt="President"
+            />
+            <h3>Daniel James Anderson</h3>
+            <p>President</p>
+          </div>
+          <div class="second-image-staff">
+            <img
+              src="./images/about-images-staff/person-2.jpg"
+              alt="President"
+            />
+            <h3>William Alexander Mitchell</h3>
+            <p>Vice President</p>
+          </div>
+          <div class="third-image-staff">
+            <img
+              src="./images/about-images-staff/person-3.jpg"
+              alt="President"
+            />
+            <h3>Michael Christopher Turner</h3>
+            <p>Manager</p>
+          </div>
+          <div class="fourth-image-staff">
+            <img
+              src="./images/about-images-staff/person-4.jpg"
+              alt="President"
+            />
+            <h3>Emily Marie Johnson</h3>
+            <p>Assistant Manager</p>
+          </div>
+        </div>
+      </div>
+    </section> */
+
+      /*-----------------crew members------------------*/
+
+      #section-crew {
+        margin-top: 5rem;
+      }
+
+      .section-main-crew {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        gap: 1rem;
+      }
+
+      .section-main-crew img {
+        width: 200px;
+        height: 200px;
+      }
+
+      .section-main-crew .first-image-crew h3,
+      .section-main-crew .second-image-crew h3,
+      .section-main-crew .third-image-crew h3,
+      .section-main-crew .fourth-image-crew h3,
+      .section-main-crew .fifth-image-crew h3 {
+        font-size: 15px;
+        text-align: center;
+        padding: 5px 15px;
+      }
+
+      .first-image-crew > p,
+      .second-image-crew > p,
+      .third-image-crew > p,
+      .fourth-image-crew > p,
+      .fifth-image-crew > p {
+        text-align: center;
+        font-weight: 700;
+        font-family: "Raleway", sans-serif;
+      }
+
+      /* <section id="section-crew">
+      <div class="container">
+        <header class="section-header">
+          <h2>Crew members</h2>
+        </header>
+        <div class="section-main-crew">
+          <div class="first-image-crew">
+            <img
+              src="./images/about-images-staff/person-5.jpg"
+              alt="Food chief"
+            />
+            <h3>Ethan Michael Collins</h3>
+            <p>Beachfront Restaurant Chief Chef</p>
+          </div>
+          <div class="second-image-crew">
+            <img
+              src="./images/about-images-staff/person-6.jpg"
+              alt="Food chief"
+            />
+            <h3>Lucas James Thompson</h3>
+            <p>Beachfront Restaurant Assistant Chef</p>
+          </div>
+
+          <div class="third-image-crew">
+            <img
+              src="./images/about-images-staff/person-7.jpg"
+              alt="Food chief"
+            />
+            <h3>Ryan Alexander Davis</h3>
+            <p>Beachfront Restaurant Waiter</p>
+          </div>
+
+          <div class="fourth-image-crew">
+            <img
+              src="./images/about-images-staff/person-8.jpg"
+              alt="Food chief"
+            />
+            <h3>Isabella Grace Turner</h3>
+            <p>Beachfront Restaurant Waitress</p>
+          </div>
+
+          <div class="fifth-image-crew">
+            <img
+              src="./images/about-images-staff/person-9.jpg"
+              alt="Food chief"
+            />
+            <h3>Ryan James Anderson</h3>
+            <p>Beach Lifeguard</p>
+          </div>
+        </div>
+      </div>
+    </section> */
+
+      /*--------------------footer--------------------*/
+
+      #footer {
+        margin-top: 5rem;
+        background: var(--black-color);
+        color: var(--white-color);
+        padding: 20px 0;
+        text-align: center;
+        font-size: 20px;
+      }
+
+      .footer-social,
+      .footer-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+      }
+
+      .footer-social p {
+        margin: 0; /* Remove any default margins on the <p> element */
+      }
+
+      .footer-social a {
+        text-decoration: none;
+        margin: 0 10px;
+        color: var(--white-color);
+      }
+
+      .footer-social a:hover {
+        color: var(--green-color);
+      }
+    </style>
+  </head>
+  <body>
+    <!---------header---------------->
+    <header id="header">
+      <nav id="navbar" class="fixed-top">
+        <div class="container">
+          <img src="./images/logo.png" alt="beach logo" class="logo" />
+          <ul class="navbar-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Properties</a></li>
+            <li><a href="#" class="current">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-----------section about Us (History)------------>
+    <section id="section-history">
+      <div class="section-about-main-history">
+        <div class="container">
+          <div class="left-image-about">
+            <img src="./images/about-images/first-picture.jpg" alt="" />
+          </div>
+          <div class="right-text-about">
+            <h1>Villa Amparo History</h1>
+            <p>
+              Villa Amparo Beach has been a cherished part of coastal living
+              since its inception <span> in the summer of 1978</span>. Founded
+              by <span>`Maria and Carlos Rodriguez'</span>, a visionary couple
+              with a deep love for the sea and a dream of creating a seaside
+              haven, the company started as a quaint, family-run beachside
+              retreat. Maria and Carlos opened their doors to guests seeking
+              solace and serenity by the shore. What began as a modest villa
+              with a few cozy cottages soon expanded to include a vibrant
+              community of vacation homes, each designed with a blend of comfort
+              and rustic charm. Over the years, Villa Amparo Beach Company has
+              become a cherished destination for those seeking refuge from the
+              hustle and bustle of daily life.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!------------section about Us (Owner husband)----------------->
+
+    <section id="section-owner-boy">
+      <div class="section-about-owner-boy">
+        <div class="container">
+          <div class="left-image-owner-boy">
+            <img
+              src="./images/about-images-owners/person1.PNG"
+              alt="Carlos Rodriguez Sr."
+            />
+          </div>
+          <div class="right-text-owner-boy">
+            <h1>Carlos A. Rodriguez Sr. (Founder)</h1>
+            <p>
+              Carlos Antonio Rodriguez, the visionary behind the beloved Villa
+              Amparo Beach Company, had a rich and diverse life before embarking
+              on his journey to create a coastal paradise. Born into a coastal
+              community, Carlos developed a deep appreciation for the sea and
+              nature from a young age. He spent his early years working as a
+              fisherman, forging a profound connection with the ocean that would
+              later inspire his life's work. Carlos also explored various trades
+              and crafts, learning valuable skills that would prove instrumental
+              in the construction and design of his beach resort. His unwavering
+              passion for preserving the natural beauty of the shoreline and his
+              commitment to hospitality were the cornerstones of his success,
+              setting the stage for the creation of Villa Amparo, a legacy that
+              continues to flourish.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--------------section about Us (Owner wife)------------------->
+    <section id="section-about-girl">
+      <div class="section-about-owner-girl">
+        <div class="container">
+          <div class="left-text-owner-girl">
+            <h1>Maria R. Rodriguez (Founder)</h1>
+            <p>
+              Maria Elena Ramirez, the co-founder of the esteemed Villa Amparo
+              Beach Company, had a remarkable life filled with diverse
+              experiences before embarking on her journey to create the seaside
+              haven that is now known and loved by many. Raised in a coastal
+              town, Maria's childhood was imbued with the rhythms of the ocean
+              and a deep appreciation for nature. She honed her talents as an
+              artist and gardener, skills that would later contribute to the
+              stunning aesthetics of Villa Amparo. Maria also pursued a career
+              in hospitality, working in various hotels and resorts, where she
+              developed a keen understanding of guest needs and a commitment to
+              exceptional service. Her marriage to Carlos Rodriguez was a union
+              of shared dreams and aspirations, ultimately leading to the
+              establishment of Villa Amparo. Maria's creative flair, love for
+              the environment, and dedication to making guests feel at home have
+              left an indelible mark on the resort's character and charm,
+              creating a legacy of warmth and beauty by the sea.
+            </p>
+          </div>
+          <div class="right-image-owner-girl">
+            <img
+              src="./images/about-images-owners/person2.PNG"
+              alt="Maria Rodriguez"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!---------------section about Us (awards / trophy)------------->
+    <section id="awards">
+      <div class="container">
+        <hr />
+        <header class="section-header">
+          <h2>Awards</h2>
+        </header>
+        <div class="flex-items">
+          <div class="first-award">
+            <img
+              src="./images/about-images-awards/trophy-1.jpg"
+              alt="first-award"
+            />
+
+            <p>
+              <i class="bi bi-trophy-fill"></i>
+              <span>Diri Ta Beach Bliss:</span> The Serene Shoreline Excellence
+              Award
+            </p>
+          </div>
+          <div class="second-award">
+            <img
+              src="./images/about-images-awards/trophy-2.jpg"
+              alt="second-award"
+            />
+
+            <p>
+              <i class="bi bi-trophy-fill"></i>
+              <span> Diri Ta Beach:</span> Tropical Paradise Excellence Award
+            </p>
+          </div>
+          <div class="third-award">
+            <img
+              src="./images/about-images-awards/trophy-3.jpg"
+              alt="third-award"
+            />
+
+            <p>
+              <i class="bi bi-trophy-fill"></i
+              ><span> Diri Ta Beach Beauty:</span> Coastal Gem Award
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!----------------staff (members) about Us--------------->
+    <section id="section-staff">
+      <div class="container">
+        <hr />
+        <header class="section-header">
+          <h2>Resort Executives</h2>
+        </header>
+        <div class="section-main-staff">
+          <div class="first-image-staff">
+            <img
+              src="./images/about-images-staff/person-1.jpg"
+              alt="President"
+            />
+            <h3>Daniel James Anderson</h3>
+            <p>President</p>
+          </div>
+          <div class="second-image-staff">
+            <img
+              src="./images/about-images-staff/person-2.jpg"
+              alt="Vice President"
+            />
+            <h3>William Alexander Mitchell</h3>
+            <p>Vice President</p>
+          </div>
+          <div class="third-image-staff">
+            <img src="./images/about-images-staff/person-3.jpg" alt="Manager" />
+            <h3>Michael Christopher Turner</h3>
+            <p>Manager</p>
+          </div>
+          <div class="fourth-image-staff">
+            <img
+              src="./images/about-images-staff/person-4.jpg"
+              alt="Assistant Manager"
+            />
+            <h3>Emily Marie Johnson</h3>
+            <p>Assistant Manager</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--------------------crew members----------------->
+    <section id="section-crew">
+      <div class="container">
+        <header class="section-header">
+          <h2>Crew members</h2>
+        </header>
+        <div class="section-main-crew">
+          <div class="first-image-crew">
+            <img
+              src="./images/about-images-staff/person-5.jpg"
+              alt="Food chief"
+            />
+            <h3>Ethan Michael Collins</h3>
+            <p>Beachfront Restaurant Chief Chef</p>
+          </div>
+          <div class="second-image-crew">
+            <img
+              src="./images/about-images-staff/person-6.jpg"
+              alt="Food chief"
+            />
+            <h3>Lucas James Thompson</h3>
+            <p>Beachfront Restaurant Assistant Chef</p>
+          </div>
+
+          <div class="third-image-crew">
+            <img
+              src="./images/about-images-staff/person-7.jpg"
+              alt="Food chief"
+            />
+            <h3>Ryan Alexander Davis</h3>
+            <p>Beachfront Restaurant Waiter</p>
+          </div>
+          <div class="fourth-image-crew">
+            <img
+              src="./images/about-images-staff/person-8.jpg"
+              alt="Food chief"
+            />
+            <h3>Isabella Grace Turner</h3>
+            <p>Beachfront Restaurant Waitress</p>
+          </div>
+
+          <div class="fifth-image-crew">
+            <img
+              src="./images/about-images-staff/person-9.jpg"
+              alt="Food chief"
+            />
+            <h3>Ryan James Anderson</h3>
+            <p>Beach Lifeguard</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!----------footer--------------->
+    <footer id="footer">
+      <div class="footer-social">
+        <p>Copyright 2023 | Mini Project 1 |</p>
+        <a href="#"><i class="bi bi-facebook"></i></a>
+        <a href="#"><i class="bi bi-twitter"></i></a>
+        <a href="#"><i class="bi bi-instagram"></i></a>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
