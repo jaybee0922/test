@@ -37,7 +37,12 @@
       <nav id="navbar" class="fixed-top">
         <div class="container">
           <div class="navbar-right">
-            <ul>
+            <div id="menu-toggle" class="menu-icon">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </div>
+            <ul class="nav-links">
               <li><a href="index.html">Home</a></li>
               <li><a href="services.html" class="current">Services</a></li>
               <li><a href="about.html">About Us</a></li>
@@ -435,6 +440,23 @@
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"
     ></script>
-    <script src="app.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuToggle = document.getElementById("menu-toggle");
+        const navLinks = document.querySelector(".nav-links");
+
+        menuToggle.addEventListener("click", function () {
+          navLinks.classList.toggle("active");
+        });
+
+        // Close the menu when a link is clicked
+        const navLinksList = document.querySelectorAll(".nav-links a");
+        navLinksList.forEach(function (link) {
+          link.addEventListener("click", function () {
+            navLinks.classList.remove("active");
+          });
+        });
+      });
+    </script>
   </body>
 </html>

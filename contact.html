@@ -37,9 +37,14 @@
       <nav id="navbar" class="fixed-top">
         <div class="container">
           <div class="navbar-right">
-            <ul>
+            <div id="menu-toggle" class="menu-icon">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </div>
+            <ul class="nav-links">
               <li><a href="index.html">Home</a></li>
-              <li><a href="services.html">Service</a></li>
+              <li><a href="services.html">Services</a></li>
               <li><a href="about.html">About Us</a></li>
               <li><a href="contact.html" class="current">Contact</a></li>
             </ul>
@@ -200,6 +205,24 @@
         style: "mapbox://styles/mapbox/streets-v11",
         center: [121.04543, 14.545728],
         zoom: 18,
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuToggle = document.getElementById("menu-toggle");
+        const navLinks = document.querySelector(".nav-links");
+
+        menuToggle.addEventListener("click", function () {
+          navLinks.classList.toggle("active");
+        });
+
+        // Close the menu when a link is clicked
+        const navLinksList = document.querySelectorAll(".nav-links a");
+        navLinksList.forEach(function (link) {
+          link.addEventListener("click", function () {
+            navLinks.classList.remove("active");
+          });
+        });
       });
     </script>
   </body>

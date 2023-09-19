@@ -33,7 +33,12 @@
       <nav id="navbar" class="fixed-top">
         <div class="container">
           <div class="navbar-right">
-            <ul>
+            <div id="menu-toggle" class="menu-icon">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </div>
+            <ul class="nav-links">
               <li><a href="index.html">Home</a></li>
               <li><a href="services.html">Services</a></li>
               <li><a href="about.html" class="current">About Us</a></li>
@@ -46,8 +51,8 @@
 
     <!-----------section about Us (History)------------>
     <section id="section-history">
-      <div class="section-about-main-history">
-        <div class="container">
+      <div class="container">
+        <div class="section-about-main-history">
           <div class="left-image-about">
             <img src="./images/about-images/first-picture.jpg" alt="" />
           </div>
@@ -75,8 +80,8 @@
     <!------------section about Us (Owner husband)----------------->
 
     <section id="section-owner-boy">
-      <div class="section-about-owner-boy">
-        <div class="container">
+      <div class="container">
+        <div class="section-about-owner-boy">
           <div class="left-image-owner-boy">
             <img
               src="./images/about-images-owners/person1.PNG"
@@ -107,8 +112,8 @@
 
     <!--------------section about Us (Owner wife)------------------->
     <section id="section-about-girl">
-      <div class="section-about-owner-girl">
-        <div class="container">
+      <div class="container">
+        <div class="section-about-owner-girl">
           <div class="left-text-owner-girl">
             <h1>Maria R. Rodriguez (Founder)</h1>
             <p>
@@ -341,5 +346,23 @@
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"
     ></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuToggle = document.getElementById("menu-toggle");
+        const navLinks = document.querySelector(".nav-links");
+
+        menuToggle.addEventListener("click", function () {
+          navLinks.classList.toggle("active");
+        });
+
+        // Close the menu when a link is clicked
+        const navLinksList = document.querySelectorAll(".nav-links a");
+        navLinksList.forEach(function (link) {
+          link.addEventListener("click", function () {
+            navLinks.classList.remove("active");
+          });
+        });
+      });
+    </script>
   </body>
 </html>

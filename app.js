@@ -61,3 +61,22 @@ function myCarousel() {
   j[myIndex - 1].style.display = "block";
   setTimeout(myCarousel, 2000);
 }
+
+/*---------------navbar-------------*/
+
+document.addEventListener("DOMContentLoaded", function () {
+  const menuToggle = document.getElementById("menu-toggle");
+  const navLinks = document.querySelector(".nav-links");
+
+  menuToggle.addEventListener("click", function () {
+    navLinks.classList.toggle("active");
+  });
+
+  // Close the menu when a link is clicked
+  const navLinksList = document.querySelectorAll(".nav-links a");
+  navLinksList.forEach(function (link) {
+    link.addEventListener("click", function () {
+      navLinks.classList.remove("active");
+    });
+  });
+});
